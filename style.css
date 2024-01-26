@@ -1,0 +1,39 @@
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        background-color: #333;
+        padding: 15px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between; /* Вирівнює елементи по горизонталі */
+        align-items: center;
+    }
+
+    nav button {
+        margin-left: 10px; /* Встановлює лівий відступ для кнопки */
+    }
+
+    .menu-icon {
+        font-size: 24px;
+        cursor: pointer;
+        color: #ffffff;
+    }
+
+/* Стилі для екранів шириною між 601px і 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        background-color: white;
+    }
+}
+
+/* Стилі для екранів шириною 901px і більше */
+@media (min-width: 901px) {
+    body {
+        background-color: white;
+    }
+}
+
