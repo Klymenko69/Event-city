@@ -2,179 +2,178 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Event city</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Event city</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<!-- <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <nav class="navbar">
-        <img src="icons/Vector.svg" alt="logo" />
-        <div class="nav-right">
-            <img src="icons/Menu.svg" alt="menu" id="burger-btn" onclick="openBurger()">
-            <div id="burger-menu">
-                <p1>link</p1>
-                <p1>link</p1>
-                <p1>link</p1>
-            </div>
-            <div id="overlay" onclick="openBurger()"></div>
-        </div>
-    </nav>
+	<nav class="navbar">
+		<img src="icons/Vector.svg" alt="logo" />
+		<div class="nav-right">
+			<img src="icons/Menu.svg" alt="menu" id="burger-btn" onclick="openBurger()">
+		</div>
+	</nav>
 
-    <div class="header">
-        <h4>Реалізуйте Ідею</h4>
-        <h1>Створіть свою подію за кілька кроків!</h1>
-        <p1>Після відправки заявки наші модератори перевірять та опублікають вашу подію протягом 24 годин.</p1>
-    </div>
-    <div class="form-event">
-        <div id="upload-container">
-            <img src="" alt="">
-            <input class="input-form" type="file" id="upload-input" name="image" accept="image/*">
-            <div id="alt-text">Завантажити прив'ю</div>
-        </div>
-        <div class="input-group">
-            <p2 class="input-group-title">Назва</p2>
-            <input id="name" class="input-form" type="text" name="Name" placeholder="Заголовок для вашої події" />
-        </div>s
-        <div class="input-group">
-            <p2 class="input-group-title">Організатори</p2>
-            <input id="organization" class="input-form" type="text" name="Name"
-                placeholder="ПІБ організатора або назва організації" />
-        </div>
-        <div class="input-group">
-            <p2 id="categories" class="input-group-title">Оберіть категорію</p2>
-            <select class="input-form" name="options">
-                <option value="1">Розваги та культура</option>
-                <option value="2">Спорт та активний відпочинок</option>
-                <option value="3">Суспільство та благодійність</option>
-                <option value="4">Навчання та розвиток</option>
-                <option value="5">Розваги для сім'ї</option>
-                <option value="6">Кулінарія та гастрономія</option>
-            </select>
-        </div>
-        <div class="form-event-row">
-            <div class="input-group">
-                <p2 class="input-group-title">Дата</p2>
-                <input id="date" class="input-form" type="date" name="Name" placeholder="дд/мм" />
-                <span class="input-icon"><i><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="Calendar_fill">
-                                <path id="Rectangle 26"
-                                    d="M2 9C2 7.11438 2 6.17157 2.58579 5.58579C3.17157 5 4.11438 5 6 5H18C19.8856 5 20.8284 5 21.4142 5.58579C22 6.17157 22 7.11438 22 9C22 9.4714 22 9.70711 21.8536 9.85355C21.7071 10 21.4714 10 21 10H3C2.5286 10 2.29289 10 2.14645 9.85355C2 9.70711 2 9.4714 2 9Z"
-                                    fill="#8F8F8F" />
-                                <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M2.58579 21.4142C2 20.8284 2 19.8856 2 18V13C2 12.5286 2 12.2929 2.14645 12.1464C2.29289 12 2.5286 12 3 12H21C21.4714 12 21.7071 12 21.8536 12.1464C22 12.2929 22 12.5286 22 13V18C22 19.8856 22 20.8284 21.4142 21.4142C20.8284 22 19.8856 22 18 22H6C4.11438 22 3.17157 22 2.58579 21.4142ZM8 16C7.44772 16 7 16.4477 7 17C7 17.5523 7.44772 18 8 18H16C16.5523 18 17 17.5523 17 17C17 16.4477 16.5523 16 16 16H8Z"
-                                    fill="#8F8F8F" />
-                                <path id="Line 1" d="M7 3L7 6" stroke="#8F8F8F" stroke-width="2"
-                                    stroke-linecap="round" />
-                                <path id="Line 2" d="M17 3L17 6" stroke="#8F8F8F" stroke-width="2"
-                                    stroke-linecap="round" />
-                            </g>
-                        </svg></i></span>
-            </div>
-            <div class="input-group">
-                <p2 class="input-group-title">Початок</p2>
-                <input id="startTime" class="input-form" type="time" name="Name" placeholder="00:00" />
-                <span class="input-icon"><i><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="Time_fill">
-                                <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM13 6.5C13 5.94772 12.5523 5.5 12 5.5C11.4477 5.5 11 5.94772 11 6.5V11.75C11 12.4404 11.5596 13 12.25 13H15.5C16.0523 13 16.5 12.5523 16.5 12C16.5 11.4477 16.0523 11 15.5 11H13V6.5Z"
-                                    fill="#8F8F8F" />
-                            </g>
-                        </svg>
-                    </i>
-                </span>
+	<div id="burger-menu">
+		<p1>link</p1>
+		<p1>link</p1>
+		<p1>link</p1>
+	</div>
 
-            </div>
-        </div>
-        <div class="form-event-row">
-            <div class="input-group">
-                <p2 class="input-group-title">Тривалість події</p2>
-                <input id="time" class="input-form" type="text" value="1 година" name="Name" />
-            </div>
-            <div class="input-group">
-                <p2 id="ticket" class="input-group-title">Ціна квитка</p2>
-                <input class="input-form" type="text" value="Безкоштовно" name="Name" placeholder="00:00" />
-            </div>
-        </div>
-        <div class="input-group">
-            <p2 class="input-group-title">Контактна інформація</p2>
-            <input id="number" class="input-form" type="tel" name="Name" placeholder="Телефон" />
-            <div class="checkbox-group">
-                <input class="checkbox" type="checkbox" />
-                <label for="checkbox">Бронювання місць по телефону</label>
-            </div>
-        </div>
-        <div class="input-group">
-            <p2 class="input-group-title">Адреса</p2>
-            <input id="address" class="input-form" type="text" name="Name" placeholder="Локація події" />
-        </div>
-        <div class="input-group">
-            <p2 class="input-group-title">Опис</p2>
-            <textarea id="description" class="input-textarea" type="textarea" name="Name"
-                placeholder="Поділіться деталями події"></textarea>
-        </div>
-        <button id="button" onclick="userData()" class="primary-button" width="100%">Оформити заявку</button>
+	<div class="header">
+		<h4>Реалізуйте Ідею</h4>
+		<h1>Створіть свою подію за кілька кроків!</h1>
+		<p1>Після відправки заявки наші модератори перевірять та опублікають вашу подію протягом 24 годин.</p1>
+	</div>
+	<div class="form-event">
+		<div id="upload-container">
+			<img src="" alt="">
+			<input class="input-form" type="file" id="upload-input" name="image" accept="image/*">
+			<div id="alt-text">Завантажити прив'ю</div>
+		</div>
+		<div class="input-group">
+			<p2 class="input-group-title">Назва</p2>
+			<input id="name" class="input-form" type="text" name="Name" placeholder="Заголовок для вашої події" />
+		</div>s
+		<div class="input-group">
+			<p2 class="input-group-title">Організатори</p2>
+			<input id="organization" class="input-form" type="text" name="Name"
+				placeholder="ПІБ організатора або назва організації" />
+		</div>
+		<div class="input-group">
+			<p2 id="categories" class="input-group-title">Оберіть категорію</p2>
+			<select class="input-form" name="options">
+				<option value="1">Розваги та культура</option>
+				<option value="2">Спорт та активний відпочинок</option>
+				<option value="3">Суспільство та благодійність</option>
+				<option value="4">Навчання та розвиток</option>
+				<option value="5">Розваги для сім'ї</option>
+				<option value="6">Кулінарія та гастрономія</option>
+			</select>
+		</div>
+		<div class="form-event-row">
+			<div class="input-group">
+				<p2 class="input-group-title">Дата</p2>
+				<input id="date" class="input-form" type="date" name="Name" placeholder="дд/мм" />
+				<span class="input-icon"><i><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<g id="Calendar_fill">
+								<path id="Rectangle 26"
+									d="M2 9C2 7.11438 2 6.17157 2.58579 5.58579C3.17157 5 4.11438 5 6 5H18C19.8856 5 20.8284 5 21.4142 5.58579C22 6.17157 22 7.11438 22 9C22 9.4714 22 9.70711 21.8536 9.85355C21.7071 10 21.4714 10 21 10H3C2.5286 10 2.29289 10 2.14645 9.85355C2 9.70711 2 9.4714 2 9Z"
+									fill="#8F8F8F" />
+								<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd"
+									d="M2.58579 21.4142C2 20.8284 2 19.8856 2 18V13C2 12.5286 2 12.2929 2.14645 12.1464C2.29289 12 2.5286 12 3 12H21C21.4714 12 21.7071 12 21.8536 12.1464C22 12.2929 22 12.5286 22 13V18C22 19.8856 22 20.8284 21.4142 21.4142C20.8284 22 19.8856 22 18 22H6C4.11438 22 3.17157 22 2.58579 21.4142ZM8 16C7.44772 16 7 16.4477 7 17C7 17.5523 7.44772 18 8 18H16C16.5523 18 17 17.5523 17 17C17 16.4477 16.5523 16 16 16H8Z"
+									fill="#8F8F8F" />
+								<path id="Line 1" d="M7 3L7 6" stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" />
+								<path id="Line 2" d="M17 3L17 6" stroke="#8F8F8F" stroke-width="2" stroke-linecap="round" />
+							</g>
+						</svg></i></span>
+			</div>
+			<div class="input-group">
+				<p2 class="input-group-title">Початок</p2>
+				<input id="startTime" class="input-form" type="time" name="Name" placeholder="00:00" />
+				<span class="input-icon"><i><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<g id="Time_fill">
+								<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd"
+									d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM13 6.5C13 5.94772 12.5523 5.5 12 5.5C11.4477 5.5 11 5.94772 11 6.5V11.75C11 12.4404 11.5596 13 12.25 13H15.5C16.0523 13 16.5 12.5523 16.5 12C16.5 11.4477 16.0523 11 15.5 11H13V6.5Z"
+									fill="#8F8F8F" />
+							</g>
+						</svg>
+					</i>
+				</span>
+
+			</div>
+		</div>
+		<div class="form-event-row">
+			<div class="input-group">
+				<p2 class="input-group-title">Тривалість події</p2>
+				<input id="time" class="input-form" type="text" value="1 година" name="Name" />
+			</div>
+			<div class="input-group">
+				<p2 id="ticket" class="input-group-title">Ціна квитка</p2>
+				<input class="input-form" type="text" value="Безкоштовно" name="Name" placeholder="00:00" />
+			</div>
+		</div>
+		<div class="input-group">
+			<p2 class="input-group-title">Контактна інформація</p2>
+			<input id="number" class="input-form" type="tel" name="Name" placeholder="Телефон" />
+			<div class="checkbox-group">
+				<input class="checkbox" type="checkbox" />
+				<label for="checkbox">Бронювання місць по телефону</label>
+			</div>
+		</div>
+		<div class="input-group">
+			<p2 class="input-group-title">Адреса</p2>
+			<input id="address" class="input-form" type="text" name="Name" placeholder="Локація події" />
+		</div>
+		<div class="input-group">
+			<p2 class="input-group-title">Опис</p2>
+			<textarea id="description" class="input-textarea" type="textarea" name="Name"
+				placeholder="Поділіться деталями події"></textarea>
+		</div>
+		<button id="button" onclick="userData()" class="primary-button" width="100%">Оформити заявку</button>
 
 
-    </div>
+	</div>
 
 </body>
 <script>
+	const burgerBtn = document.getElementById('burger-btn');
+	const burgerMenu = document.getElementById('burger-menu');
+	const overlay = document.getElementById('overlay');
 
-    function openBurger() {
-        var burgerMenu = document.getElementById('burger-btn');
-        var overlay = document.getElementById('overlay');
+	function openBurger() {
 
-        if (burgerMenu.style.display === "block") {
-            burgerMenu.style.display = "none";
-            overlay.style.display = "none";
-        }
-        else{
-            burgerMenu.style.display = "block";
-            overlay.style.display = "block";
-        }
-    }
+		if (burgerMenu.style.display === "block") {
+			burgerMenu.style.display = "none";
+			overlay.style.display = "none";
+		}
+		else {
+			burgerMenu.style.display = "block";
+			overlay.style.display = "block";
+		}
+	}
 
-    const allUserData = [];
+	const allUserData = [];
 
-    function getDataUser() {
-        const name = document.getElementById("name").value;
-        const organization = document.getElementById("organization").value;
-        const categori = document.getElementById("categories").value;
-        const date = document.getElementById("date").value;
-        const start = document.getElementById("startTime").value;
-        const duration = document.getElementById("time").value;
-        const price = document.getElementById("ticket").value;
-        const phone = document.getElementById("number").value;
-        const address = document.getElementById("address").value;
-        const description = document.getElementById("description").value;
-        return (name,
-            organization,
-            categori,
-            date,
-            start,
-            duration,
-            price,
-            phone,
-            address,
-            description);
-    }
+	function getDataUser() {
+		const name = document.getElementById("name").value;
+		const organization = document.getElementById("organization").value;
+		const categori = document.getElementById("categories").value;
+		const date = document.getElementById("date").value;
+		const start = document.getElementById("startTime").value;
+		const duration = document.getElementById("time").value;
+		const price = document.getElementById("ticket").value;
+		const phone = document.getElementById("number").value;
+		const address = document.getElementById("address").value;
+		const description = document.getElementById("description").value;
+		return (name,
+			organization,
+			categori,
+			date,
+			start,
+			duration,
+			price,
+			phone,
+			address,
+			description);
+	}
 
-    function userData() {
-        allUserData.push(getDataUser());
-        alert(getDataUser());
-    }
+	function userData() {
+		allUserData.push(getDataUser());
+		alert(getDataUser());
+	}
 
     // function userData() {
     //     const user = getDataUser();
