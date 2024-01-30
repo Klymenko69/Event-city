@@ -20,7 +20,7 @@
 	<nav class="navbar">
 		<img src="icons/Vector.svg" alt="logo" />
 		<div class="nav-right">
-			<img src="icons/Menu.svg" alt="menu" id="burger-btn" onclick="openBurger()">
+			<img src="icons/Menu.svg" alt="menu" id="burger-btn" onclick="toggleBurger()">
 		</div>
 	</nav>
 
@@ -129,20 +129,16 @@
 
 </body>
 <script>
-	const burgerBtn = document.getElementById('burger-btn');
 	const burgerMenu = document.getElementById('burger-menu');
-	const overlay = document.getElementById('overlay');
 
+	function toggleBurger() {
+		burgerMenu.style.display === "block" ? closeBurger() : openBurger();
+	}
 	function openBurger() {
-
-		if (burgerMenu.style.display === "block") {
-			burgerMenu.style.display = "none";
-			overlay.style.display = "none";
-		}
-		else {
-			burgerMenu.style.display = "block";
-			overlay.style.display = "block";
-		}
+		burgerMenu.style.display = "block";
+	}
+	function closeBurger() {
+		burgerMenu.style.display = "none";
 	}
 
 	const allUserData = [];

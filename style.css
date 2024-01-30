@@ -149,7 +149,7 @@ p2 {
     }
 
     #burger-menu {
-			/* display: none; */
+			display: none;
 			position: fixed;
 			width: 100%;
 			top: 80px;
