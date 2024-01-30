@@ -35,7 +35,7 @@
 		<h1>Створіть свою подію за кілька кроків!</h1>
 		<p1>Після відправки заявки наші модератори перевірять та опублікають вашу подію протягом 24 годин.</p1>
 	</div>
-	<div class="form-event">
+	<form class="form-event" onsubmit="submitForm(event)">
 		<div id="upload-container">
 			<img src="" alt="">
 			<input class="input-form" type="file" id="upload-input" name="image" accept="image/*">
@@ -51,8 +51,8 @@
 				placeholder="ПІБ організатора або назва організації" />
 		</div>
 		<div class="input-group">
-			<p2 id="categories" class="input-group-title">Оберіть категорію</p2>
-			<select class="input-form" name="options">
+			<p2 class="input-group-title">Оберіть категорію</p2>
+			<select id="categories" class="input-form" name="options">
 				<option value="1">Розваги та культура</option>
 				<option value="2">Спорт та активний відпочинок</option>
 				<option value="3">Суспільство та благодійність</option>
@@ -101,8 +101,8 @@
 				<input id="time" class="input-form" type="text" value="1 година" name="Name" />
 			</div>
 			<div class="input-group">
-				<p2 id="ticket" class="input-group-title">Ціна квитка</p2>
-				<input class="input-form" type="text" value="Безкоштовно" name="Name" placeholder="00:00" />
+				<p2 class="input-group-title">Ціна квитка</p2>
+				<input id="ticket" class="input-form" type="text" value="Безкоштовно" name="Name" placeholder="00:00" />
 			</div>
 		</div>
 		<div class="input-group">
@@ -122,23 +122,24 @@
 			<textarea id="description" class="input-textarea" type="textarea" name="Name"
 				placeholder="Поділіться деталями події"></textarea>
 		</div>
-		<button id="button" onclick="userData()" class="primary-button" width="100%">Оформити заявку</button>
-
-
-	</div>
+		<button id="button" type="submit" class="primary-button" width="100%">Оформити заявку</button>
+	</form>
 
 </body>
+<script src="/scripts/menu.js"></script>
 <script>
-	const burgerMenu = document.getElementById('burger-menu');
 
-	function toggleBurger() {
-		burgerMenu.style.display === "block" ? closeBurger() : openBurger();
-	}
-	function openBurger() {
-		burgerMenu.style.display = "block";
-	}
-	function closeBurger() {
-		burgerMenu.style.display = "none";
+	function submitForm(e) {
+		e.preventDefault()
+		console.log(e)
+		const data = {}
+		const fields = ["name", "organization", "categories", "date", "startTime", "time", "ticket", "number", "address", "description"]
+
+		for (let i = 0; i < fields.length; i++) {
+			const id = fields[i];
+			data[id] = document.getElementById(id).value;
+		}
+		alert(JSON.stringify(data))
 	}
 
 	const allUserData = [];
@@ -154,7 +155,9 @@
 		const phone = document.getElementById("number").value;
 		const address = document.getElementById("address").value;
 		const description = document.getElementById("description").value;
-		return (name,
+
+		return {
+			name,
 			organization,
 			categori,
 			date,
@@ -163,11 +166,14 @@
 			price,
 			phone,
 			address,
-			description);
+			description
+		};
 	}
 
 	function userData() {
-		allUserData.push(getDataUser());
+		allUserData.concat(getDataUser());
+		allUserData = [...allUserData, ...getDataUser()]
+
 		alert(getDataUser());
 	}
 
