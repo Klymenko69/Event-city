@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: white;
+        margin: 0;
+        height: 100vh;
+
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+        gap: 100px;
+    }
+
+
+    button {
+        top: 50%;
+        left: 50%;
+        position: relative;
+        font-size: 24px;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 8px 24px;
+    }
+
+</style>
+
+<body>
+    <button id="btn" type="submit" onmouseenter="catchMe()">Press me if you're not a losser</button>
+
+</body>
+<script>
+    
+    
+    let btn = document.getElementById("btn");
+
+    function catchMe() {
+        btn.style.top = Math.random () * 90 + "%";
+        btn.style.left = Math.random () * 90 + "%";
+    }
+
+    // function vertical() {
+    //     let randomVertical = Math.random() * 90;
+    //     btn.style.top = randomVertical + "%";
+    // }
+    // function horizontal() {
+    //     let randomHorizontal = Math.random() * 90;
+    //     btn.style.left = randomHorizontal + "%";
+    // }
+        // function runForest() {
+
+        //     if (btn.style.top = "50%") {
+        //         btn.style.top = "25%";
+        //     }
+        // }
+
+        // function runForestRun() {
+        //     if (btn.style.top = "25%") {
+        //         btn.style.top = "50%";
+        //     }
+        // }
+    
+    // btn.style.top = runForest();
+    //     if (btn.style.top = "50%"){
+    //         btn.style.top = "25%";
+    //     }
+    //     else{
+    //         btn.style.top = "25%"
+    //         btn.style.top = "50%";
+    //     }
+
+
+
+
+
+</script>
+
+</html>

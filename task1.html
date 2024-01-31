@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: white;
+        margin: 0;
+        height: 100vh;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .buttons {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 36px;
+    }
+
+    button {
+        font-size: 100px;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+</style>
+
+<body>
+    <div class="buttons">
+        <button type="submit" onclick="minus()">-</button>
+        <button type="submit" onclick="plus()">+</button>
+    </div>
+    <h1 id="count">0</h1>
+</body>
+<script>
+
+let counterValue = 0;
+
+    function updateCounter() {
+        let counterElement = document.getElementById("count");
+        counterElement.textContent = counterValue;
+    }
+
+    function minus() {
+        if (counterValue > 0) {
+            counterValue--;
+            updateCounter();
+        }
+    }
+
+    function plus() {
+        counterValue++;
+        updateCounter();
+    }
+
+ 
+
+
+</script>
+
+</html>
