@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: white;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input {
+        width: 200px;
+        height: 56px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 0px 24px;
+        font-size: large;
+    }
+
+    form {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+    }
+
+    div {
+        position: relative;
+        height: 56px;
+    }
+
+    .eye {
+        position: absolute;
+        top: 35%;
+        /* transform: translate(0%, 50%); */
+        right: 16px;
+        margin: 0;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+
+
+</style>
+
+<body>
+    <form method="get" action="http://" onsubmit="singForm()">
+        <input type="email" id="email" name="name" placeholder="Enter your email" required>
+        <div><input type="password" id="password" placeholder="Password" required maxlength="10" minlength="8">
+            <span class="eye" id="passwordIcon" onclick="viewPassword()">👁️</span>
+        </div>
+        <button type="submit" style="width: 100%; height: 56px; margin: 0;">Sing in</button>
+    </form>
+
+</body>
+<script>
+
+    const password = document.getElementById('password');
+    const icon = document.getElementById('passwordIcon');
+    
+    function viewPassword() {
+        password.type === "password" ? password.type = "text" : password.type = "password";
+        icon.innerHTML === "👁️" ? icon.innerHTML = "🔒" : icon.innerHTML = "👁️";
+    }
+
+   
+
+
+
+
+
+    // function viewPassword() {
+    //     let email = document.getElementById("email");
+    //     let password = document.getElementById("password");
+    //     let icons = document.getElementById("viewPassword");
+
+    //     if (password.type === "password") {
+    //         password.type = "text";
+    //         icons.innerHTML = "👁️";
+
+    //     }
+    //     else {
+    //         password.type = "text"
+    //         password.innerHTML = "👁️";
+    //     };
+    // }
+
+
+</script>
+
+</html>
